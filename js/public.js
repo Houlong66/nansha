@@ -39,12 +39,7 @@ $('#login_btn,.zhezhao').click( function(){
 			
 	$("#login_btn").click(function(){
 		var a=$('#zsbh').val();
-		if(a=="电子"){
-			
-			$(this).prop("href","优惠政策_刚注册.html");
-		}else{
-			$(this).prop("href","企业2优惠政策_刚注册.html");
-		}
+			$(this).prop("href","user_center.html");
 		});
 	//客服弹窗
 		

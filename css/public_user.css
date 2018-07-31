@@ -256,6 +256,8 @@ input[type="checkbox"] { width:14px; height:14px; margin:12px 3px auto 1px; bord
 .yy_icon,.icon_sd{ background:url(../images/icon_2.png) top center no-repeat;}
 .icon_zp{ background-image:url(../images/icon_3.png)}
 .icon_zc{ background-image:url(../images/icon_1.png)}
+.icon_iso{ background-image:url(../images/icon_iso.png)}
+.icon_iso_disabled{ background-image:url(../images/icon_ISO_disabled.png)}
 .icon_rz{ background-image:url(../images/icon_4.png)}
 .icon_zx{ background-image:url(../images/icon_5.png)}
 .icon_cw{ background-image:url(../images/icon_6.png)}

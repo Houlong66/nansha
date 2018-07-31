@@ -17,11 +17,6 @@ $(function(){
 		"speed":1000
 		
 	});
-	/******/
-	time = window.setInterval(function(){
-		$('leftani()')	
-	},5000);
-	/******/
 	
 });
 </script>
@@ -50,7 +45,7 @@ $(function(){
                 <div class="fl-pic">
                   <ul>
                     <!-- 图片友情链接 -->
-                    <li><a href="#"><img src="images/zz_1.png" width="40" height="40" /></a></li>
+                    <li><a href="#"><img src="images/zz_1_disabled.png" width="40" height="40" id="iso9000"/></a></li>
                     <li><a href="#"><img src="images/zz_2.png" width="40" height="40" /></a></li>
                     <li><a href="#"><img src="images/zz_3.png" width="40" height="40" /></a></li>
                     <li><a href="#"><img src="images/zz_4.png" width="40" height="40" /></a></li>
@@ -111,13 +106,13 @@ $(function(){
           <tr>
             <td align="left" class="jiantou"><a href="###">《广州南沙新区(自贸片区)促进总部经济发展扶持办法》</a></td>
             <td align="right">（2017-10-13） </td>
-            <td align="right"><a href="#" class="blue">审批中</a></td>
+            <td align="right"><a class="blue">审批中</a></td>
             <td width="200"></td>
           </tr>
-          <tr>
-            <td align="left" class="jiantou"><a href="###">《广州南沙新区(自贸片区)促进总部经济发展扶持办法》</a></td>
-            <td align="right">（2017-10-13） </td>
-            <td align="right"><a href="#" class="blue">审批中</a></td>
+          <tr id="ISO-handle-process" hidden="hidden">
+            <td align="left" class="jiantou"><a href="###">&nbsp;&nbsp;&nbsp;&nbsp;ISO9000资质办理</a></td>
+            <td align="right">（2018-08-10） </td>
+            <td align="right"><a onclick="handleISOSuccess()" class="blue">审批中</a></td>
             <td width="200"></td>
           </tr>
         </tbody>
@@ -132,6 +127,7 @@ $(function(){
         <li class="yy_icon icon_sd"><a href="###">水电缴费</a></li>
         <li class="yy_icon icon_zp"><a href="###">人才招聘</a></li>
         <li class="yy_icon icon_zc"><a href="###">政策服务</a></li>
+        <li class="yy_icon icon_iso" id="iso9000-icon"><a onclick="handleISO()" style="font-size: 13px;">ISO9000办理</a></li>
       </ul>
     </div>
   </div>
@@ -255,5 +251,17 @@ $(function(){
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  function handleISO () {
+    alert("申请成功！");
+    $("#ISO-handle-process").removeAttr("hidden")
+  }
+  function handleISOSuccess() {
+    alert("已成功办理ISO9000资质！")
+    $("#iso9000").attr("src", "images/zz_1.png")
+    $("#iso9000-icon").attr("class", "yy_icon icon_iso_disabled")
+    $("#iso9000-icon").children().attr('onclick','').unbind('click')
+  }
+</script>
 </body>
 </html>

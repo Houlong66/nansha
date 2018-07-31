@@ -90,7 +90,7 @@
                               </div>
                             </div></div></td>
                           <td align="right">（2017-10-13） </td>
-                          <td align="right"><a href="广州南沙新区_自贸片区_促进总部经济发展扶持办法.html" class="btn_mini">预览</a> <a href="#" class="btn_mini">申报</a></td>
+                          <td align="right"><a href="广州南沙新区_自贸片区_促进总部经济发展扶持办法.html" class="btn_mini">预览</a> <a href="#" class="btn_mini shenbao-btn">申报</a></td>
                         </tr>
                         <tr>
                           <td align="left" class="jiantou relative"><a href="###">《广州南沙新区(自贸片区)促进科技创新产业发展扶持办法》</a>
@@ -102,7 +102,7 @@
                               </div>
                             </div></td>
                           <td align="right">（2015-2-9） </td>
-                          <td align="right"><a href="广州南沙新区_自贸片区_促进总部经济发展扶持办法.html" class="btn_mini">预览</a> <a href="#" class="btn_mini">申报</a></td>
+                          <td align="right"><a href="广州南沙新区(自贸片区)促进先进制造业与建筑业发展扶持办法.html" class="btn_mini">预览</a> <a href="#" class="btn_mini shenbao-btn">申报</a></td>
                         </tr>
                       </table>
                     </div>
@@ -111,11 +111,25 @@
         </div>
     </div>
 </div>
+<div id="alert-ruzhu" hidden="hidden">
+  <span>请先入驻南沙区！</span>
+</div>
 <script type="text/javascript">
   $(function(){
   $("#xiala_table .jiantou").click(function(){
     $(this).children(".xiala_div").slideToggle("slow");
     
+    })
+  })
+
+  // 申报按钮提示入驻
+  $(".shenbao-btn").click(function(){
+    $("#alert-ruzhu").dialog({
+      buttons: {
+        "确定": function(){
+          window.location.href = "入驻流程_内资企业.html"
+        }
+      }
     })
   })
 </script>
