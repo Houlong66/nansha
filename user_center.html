@@ -27,7 +27,7 @@ $(function(){
   <div class="div_1200 relative">
     <a class="logo" href="index_new.html"></a>
     <ul class="useer_list" id="denglu">
-      <li ><a href="###"><span class="login user"></span>未来软件服务有限公司</a></li>
+      <li ><a href="user_center.html"><span class="login user"></span>未来软件服务有限公司</a></li>
     </ul>
     <div/>
   </div>
@@ -76,7 +76,7 @@ $(function(){
     </dl>
   </div>
 </div>
-<div class="container clearfix"><a class="info_btn" id="win_cf">您有新的政策推荐 <span class="number">7</span></a> <a class="info_btn " id="win_cf_2">您有新的项目申报 <span class="number">6</span></a></div>
+<div class="container clearfix"><a class="info_btn" id="win_cf" href="企业2优惠政策_刚注册.html">您有新的政策推荐 <span class="number">2</span></a> <a class="info_btn" id="win_cf_2" href="项目申报_.html">您有新的项目申报 <span class="number">2</span></a></div>
 <div class="container clearfix"> 
   
   <!--正在办理-->
@@ -86,31 +86,31 @@ $(function(){
       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_list table_list_mini ">
         <tbody>
           <tr>
-            <td align="left" class="jiantou"><a href="###">《广州南沙新区(自贸片区)促进总部经济发展扶持办法》</a></td>
+            <td align="left" class="jiantou"><a href="###">广州南沙新区（自贸片区）促进科技创新产业发展扶持政策（第二批）兑现申请</a></td>
             <td align="right">（2017-10-13） </td>
             <td align="right" ><a href="#" class="green">申报成功</a></td>
             <td width="200"></td>
           </tr>
           <tr>
-            <td align="left" class="jiantou"><a href="###">《广州南沙新区(自贸片区)促进总部经济发展扶持办法》</a></td>
+            <td align="left" class="jiantou"><a href="###">南沙区专业技术人才奖励兑现申请</a></td>
             <td align="right">（2017-10-13） </td>
             <td align="right"><a href="#" class="green">申报成功</a></td>
             <td width="200"></td>
           </tr>
           <tr>
-            <td align="left" class="jiantou"><a href="###">《广州南沙新区(自贸片区)促进总部经济发展扶持办法》</a></td>
+            <td align="left" class="jiantou"><a href="###">广州南沙新区（自贸片区）促进现代服务业发展扶持办法国际及港澳台专业服务专才奖、服务平台奖兑现申请</a></td>
             <td align="right">（2017-10-13） </td>
             <td align="right"><a href="#" class="red">申报失败</a></td>
             <td width="200"></td>
           </tr>
           <tr>
-            <td align="left" class="jiantou"><a href="###">《广州南沙新区(自贸片区)促进总部经济发展扶持办法》</a></td>
+            <td align="left" class="jiantou"><a href="###">广州市南沙区高层次教育人才申报</a></td>
             <td align="right">（2017-10-13） </td>
             <td align="right"><a class="blue">审批中</a></td>
             <td width="200"></td>
           </tr>
           <tr id="ISO-handle-process" hidden="hidden">
-            <td align="left" class="jiantou"><a href="###">&nbsp;&nbsp;&nbsp;&nbsp;ISO9000资质办理</a></td>
+            <td align="left" class="jiantou"><a href="###">ISO9000资质办理</a></td>
             <td align="right">（2018-08-10） </td>
             <td align="right"><a onclick="handleISOSuccess()" class="blue">审批中</a></td>
             <td width="200"></td>
@@ -252,6 +252,18 @@ $(function(){
   </div>
 </div>
 <script type="text/javascript">
+  function GetRequest() {   
+     var url = location.search; //获取url中"?"符后的字串   
+     var theRequest = new Object();   
+     if (url.indexOf("?") != -1) {   
+        var str = url.substr(1);   
+        strs = str.split("&");   
+        for(var i = 0; i < strs.length; i ++) {   
+           theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);   
+        }   
+     }   
+     return theRequest;   
+  }   
   function handleISO () {
     alert("申请成功！");
     $("#ISO-handle-process").removeAttr("hidden")
@@ -261,6 +273,13 @@ $(function(){
     $("#iso9000").attr("src", "images/zz_1.png")
     $("#iso9000-icon").attr("class", "yy_icon icon_iso_disabled")
     $("#iso9000-icon").children().attr('onclick','').unbind('click')
+  }
+  var request = GetRequest()
+  if (request["policy_type"] == 1) {
+    $("#win_cf").empty()
+  }
+  if (request["project_type"] == 1) {
+    $("#win_cf_2").empty()
   }
 </script>
 </body>
