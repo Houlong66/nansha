@@ -68,16 +68,16 @@ $(function(){
 		})
 	});		
 //弹窗	
-$(function(){
-	$('#win_cf').click(function(){
-		$('#win_1').fadeIn();
-		})
-	});
-$(function(){
-	$('#win_cf_2').click(function(){
-		$('#win_2').fadeIn();
-		})
-	});	
+// $(function(){
+// 	$('#win_cf').click(function(){
+// 		$('#win_1').fadeIn();
+// 		})
+// 	});
+// $(function(){
+// 	$('#win_cf_2').click(function(){
+// 		$('#win_2').fadeIn();
+// 		})
+// 	});	
 $(function(){
 	$('.win2_close').click(function(){
 		$(this).parent('.mywindow_2').fadeOut();
